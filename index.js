@@ -32,7 +32,7 @@ app.post("/", function(req, res) {
       var temp = data.current.temp_f;
       var time = data.location.localtime;
       var message1 = "I've heard ";
-      var message2 = "is a wonderful place! It is currently ";
+      var message2 = " is a wonderful place! It is currently ";
       var message3 = " in "
       var message4 = ". The current date and time there is "
 
