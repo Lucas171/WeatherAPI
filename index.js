@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 
-const port = 3000 || process.env.PORT
 const ejs = require('ejs');
 const app = express();
 
@@ -38,6 +37,6 @@ app.post("/", function(req, res) {
   });
 });
 
-app.listen(port, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server has started on port!");
 });
