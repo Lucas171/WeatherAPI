@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.render("index", {errMessage: null});
 });
 
 app.post("/", function(req, res) {
@@ -40,7 +40,7 @@ app.post("/", function(req, res) {
       res.render('index2', {message1: message1, message2: message2, message3: message3, message4: message4, city: city, temp: temp, time: time})
     } else{
 
-      var errMessage = "Please try a different zipcode";
+      var errMessage = "Please try a different zipcode or city";
       res.render('index', {errMessage: errMessage, city: null, temp: null, time: null});
     }
 
